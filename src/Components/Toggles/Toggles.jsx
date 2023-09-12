@@ -1,4 +1,4 @@
-import "./toggle.css";
+import "./Toggles.css";
 
 const Toggle = ({ toggle, handleToggleChange }) => {
   return (
