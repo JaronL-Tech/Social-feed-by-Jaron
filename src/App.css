@@ -1,0 +1,30 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+    box-sizing: border-box;
+}
+
+.flex-container {
+    display: block;
+    gap: 10px;
+    
+}
+
+.flex-item{
+   background-color: lightblue; 
+   flex: 1;
+   
+   
+   
+}
+.flex-item:hover {
+    cursor: pointer;
+    background-color: antiquewhite;
+}
+
+.PostList {
+ background-color: lightblue;
+}
+.wrapper {
+    
+}

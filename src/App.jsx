@@ -3,6 +3,7 @@ import Header from "./Components/Header/Header";
 import PostList from "./Components/PostList/PostList";
 import NewPostForm from "./Components/NewPostForm/NewPostForm";
 import { useState } from "react";
+import Toggle from "./Components/Toggles/Toggles";
 
 function App() {
   const [posts, setPosts] = useState([
@@ -19,9 +20,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <NewPostForm />
-      <PostList posts={posts} />
-      {/* <Toggle toggle={toggle} handleToggleChange={handleToggleChange} /> */}
+      <div className="flex-container">
+        <NewPostForm />
+        <PostList posts={posts} />
+        {/* <Toggle toggle={toggle} handleToggleChange={handleToggleChange} /> */}
+      </div>
     </div>
   );
 }
