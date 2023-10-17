@@ -1,9 +1,6 @@
 import Post from "../Post/Post";
 
-const PostList = ({ posts = {} }) => { 
-  const postItems = posts.map((post) => (
-    <Post key={post.userName} post={post} />
-  ));
+const PostList = ({ posts = {} }) => {
   return (
     posts && (
       <div className="PostList">

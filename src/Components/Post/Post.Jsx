@@ -1,23 +1,23 @@
 import React, { useState } from "react";
 
 const Post = ({ post }) => {
-  const { liked, setLiked } = useState(false);
-  const [DisLiked, setDisLiked] = useState(false);
+  const [isLiked, setIsLiked] = useState(false);
+  const [isDisLiked, setIsDisLiked] = useState(false);
 
   const handlelike = (e) => {
-    setLiked(!liked);
-    if (DisLiked === true) {
-      setDisLiked(!DisLiked);
+    setIsLiked(!isLiked);
+    if (isDisLiked === true) {
+      setIsDisLiked(!isDisLiked);
     }
   };
   const handleDislike = (e) => {
-    setDisLiked(!DisLiked);
-    if (liked === true) {
-      setLiked(!liked);
+    setIsDisLiked(!isDisLiked);
+    if (isLiked === true) {
+      setIsLiked(!isLiked);
     }
   };
-  const likeBtnClass = liked ? "like-btn" : "";
-  const disLikeBtnClass = DisLiked ? "disliked-btn" : "";
+  const likeBtnClass = isLiked ? "like-btn" : "";
+  const disLikeBtnClass = isDisLiked ? "disliked-btn" : "";
 
   return (
     post && (

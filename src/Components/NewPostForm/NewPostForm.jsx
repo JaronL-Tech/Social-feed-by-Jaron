@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./NewPostForm.css";
+import TextField from "../TextField/TextField";
 
 const NewPostForm = ({ onNewPost }) => {
-  const [submitting, setSubmitting] = useState(false);
-  onst[(postContent, setPostContent)] = useState("");
-  const [userName, setUserName] = useState("");
+  const [postContent, setPostContent] = useState("");
+  const [Name, setName] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
@@ -15,7 +15,7 @@ const NewPostForm = ({ onNewPost }) => {
   };
   return (
     <form onSubmit={handleSubmit} className="">
-      <TextField label="UserName" value={userName} onChange={setUserName} />
+      <TextField label="UserName" value={Name} onChange={setName} />
       <TextField
         label="PostContent"
         value={postContent}
