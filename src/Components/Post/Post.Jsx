@@ -22,10 +22,6 @@ const Post = ({ post }) => {
   return (
     post && (
       <div>
-        <h4>{Post.userName}</h4>
-        <p>{Post.postContent}</p>
-        <button>Like</button>
-        <button>Dislike</button>
         <h4>{post.userName}</h4>
         <p>{post.postContent}</p>
         <button className={likeBtnClass} onClick={handlelike}>

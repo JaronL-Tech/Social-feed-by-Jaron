@@ -1,29 +1,28 @@
 import React, { useState } from "react";
 import "./NewPostForm.css";
 
-const NewPostForm = () => {
+const NewPostForm = ({ onNewPost }) => {
   const [submitting, setSubmitting] = useState(false);
+  onst[(postContent, setPostContent)] = useState("");
+  const [userName, setUserName] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitting(true);
+    const formData = {
+      userName,
+      postContent,
+    };
+    onNewPost(formData);
   };
-
   return (
-    <div className="wrapper">
-      <h1>Post Feed</h1>
-      {submitting && <div>Submtting Form...</div>}
-      <form onSubmit={handleSubmit}>
-        <fieldset>
-          <label>
-            <p>Name</p>
-            <input name="name" />
-            <p>Post</p>
-            <input name="post" />
-          </label>
-        </fieldset>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit} className="">
+      <TextField label="UserName" value={userName} onChange={setUserName} />
+      <TextField
+        label="PostContent"
+        value={postContent}
+        onChange={setPostContent}
+      />
+      <button type="submit">Create</button>
+    </form>
   );
 };
 

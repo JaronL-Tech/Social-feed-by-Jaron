@@ -5,3 +5,10 @@ p{
 div{
     margin: 20px 0;
 }
+
+.like-btn {
+    background-color: green;
+}
+.dislike-btn {
+    background-color: red;
+}
